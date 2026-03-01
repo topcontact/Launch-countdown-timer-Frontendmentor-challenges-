@@ -1,0 +1,47 @@
+:root {
+  /* Primary Colors */
+  --color-primary-grayish-blue: hsl(237, 18%, 59%);
+  --color-primary-soft-red: hsl(345, 95%, 68%);
+  /* Neutral Colors */
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-dark-desaturated-blue: hsl(236, 21%, 26%);
+  --color-neutral-very-dark-blue-base: hsl(235, 16%, 14%);
+  --color-neutral-very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+
+  /* ตัวเสริม: ฟอนต์พื้นฐานที่ใช้กันทั้งโปรเจกต์ */
+  font-family: 'Red Hat Text', sans-serif;
+  background-color: var(--color-neutral-very-dark-blue-base);
+  color: var(--color-neutral-white);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* ✨ ท่าไม้ตาย CSS: พื้นหลังซ้อน 2 ชั้น */
+  /* ชั้นที่ 1 (ภาพเนินเขา) อยู่บนสุด, ชั้นที่ 2 (ดวงดาว) อยู่ล่างสุด */
+  background-image: url('/images/pattern-hills.svg'), url('/images/bg-stars.svg');
+
+  /* จัดตำแหน่ง: ชั้นเนินเขาติดขอบล่างและชิดขวา (หรือซ้ายขวาได้หมดเพราะลายซ้ำ), ดวงดาวเริ่มจากบนสุด */
+  background-position:
+    right bottom,
+    top center;
+
+  /* ขนาด: ชั้นแรกอาจจะกว้างทะลุจอ หรือพอดีจอ, ชั้นดวงดาวให้เต็มจอ (cover) */
+  background-size:
+    100% auto,
+    cover;
+
+  /* บังคับไม่ให้ลายซ้ำ (no-repeat) ถ้าเราไม่อยากให้ภูเขาต่อกันประหลาดๆ */
+  background-repeat: no-repeat, no-repeat;
+
+  background-color: var(--color-neutral-very-dark-mostly-black-blue);
+  font-family: 'Red Hat Text', sans-serif;
+  color: var(--color-neutral-white);
+
+  /* วางของทุกอย่าง (ส่วน <main> ที่เป็น App) ไว้กลางจอ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
