@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/launch-countdown-timer-with-react-aRTCEv3ZwL
 - Live Site URL: https://launch-countdown-timer-frontendment.vercel.app
 
 ## My process
